@@ -14,18 +14,52 @@ div {
   box-sizing: border-box;
 }
 
-/* Первый экран */
+/* Стили страницы */
+.page {
+  display: grid;
+  grid-gap: 20px;
+}
+
+.page__header {
+  background-color: #fff;
+  position        : relative;
+  text-align      : center;
+  padding         : 10px 0;
+  font-weight     : 700;
+  border-bottom   : 1px solid #e9e8ea;
+  margin-bottom   : 20px;
+}
+
+.page__title {
+  font-size: 1.1em;
+  color    : #8bc63c;
+}
+
+.page__title {
+  font-size: 1.2em;
+  color    : black;
+}
+
+.page__arrow {
+  padding    : 30px;
+  display    : flex;
+  align-items: center;
+  position   : absolute;
+  font-size  : 2em;
+  color      : #8bc63c;
+  left       : 20px;
+  top        : 0;
+  bottom     : 0;
+  content    : '&copy;'
+}
+
+/* Карточки тарифов */
 
 .card {
-  box-sizing: border-box;
+  box-sizing      : border-box;
   background-color: #fff;
   width           : 100%;
   padding         : 0 20px;
-  margin-bottom: 20px;
-}
-
-.card:last-child {
-  margin-bottom: 0;
 }
 
 .card__header {
@@ -38,10 +72,10 @@ div {
 
 .card__param {
   text-decoration: none;
-  display: block;
-  position     : relative;
-  padding      : 10px 0;
-  border-bottom: 1px solid #e9e8ea;
+  display        : block;
+  position       : relative;
+  padding        : 10px 0;
+  border-bottom  : 1px solid #e9e8ea;
 }
 
 .card__arrow {
@@ -92,7 +126,7 @@ div {
 }
 
 .card__discrount {
-  font-size : 0.9em;
+  font-size: 0.9em;
 }
 
 .card__repayment {
@@ -130,36 +164,14 @@ div {
   margin          : 10px 0;
 }
 
-/* Стили заголовка страницы */
-
-.page__header {
-  background-color: #fff;
-  position        : relative;
-  text-align      : center;
-  padding         : 10px 0;
-  font-weight     : 700;
-  border-bottom   : 1px solid #e9e8ea;
-  margin-bottom   : 20px;
+@media screen and (min-width : 640px) and (max-width : 1023px) {
+  .page {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-.page__title {
-  font-size: 1.1em;
-  color    : #8bc63c;
-}
-
-.page__title {
-  font-size: 1.2em;
-  color    : black;
-}
-
-.page__arrow {
-  display    : flex;
-  align-items: center;
-  position   : absolute;
-  font-size  : 2em;
-  color      : #8bc63c;
-  left       : 20px;
-  top        : 0;
-  bottom     : 0;
-  content    : '&copy;'
+@media screen and (min-width : 1024px) {
+  .page {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
