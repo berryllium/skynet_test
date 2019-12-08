@@ -2,7 +2,7 @@
     <div onclick="getPage('main.php')" class="page__arrow">&lsaquo;</div>
     <h1 class="page__title">Тариф "<?= $title ?>"</h1>
   </header>
-  <main>
+  <div class="card-wrapper">
     <?php foreach ($tarifs as $tarif) : ?>
       <section class="card">
         <header class="card__header">
@@ -18,4 +18,4 @@
         </div>
       </section>
     <?php endforeach ?>
-  </main>
+  </div>
